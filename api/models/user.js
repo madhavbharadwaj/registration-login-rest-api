@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 var minuteFromNow = function(){
-   var n = new Date() ;
-    var  v = n.toUTCString();
-	return v;
+   var d = new Date();
+    var n = d.toLocaleTimeString()
+	return n;
 };
 
 const userSchema = mongoose.Schema({
