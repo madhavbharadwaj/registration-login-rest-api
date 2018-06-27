@@ -1,4 +1,9 @@
 const mongoose = require('mongoose');
+var minuteFromNow = function(){
+   var n = new Date() ;
+    var  v = n.toLocaleString()
+	return v;
+};
 
 const userSchema = mongoose.Schema({
     _id: mongoose.Schema.Types.ObjectId,
@@ -20,7 +25,7 @@ const userSchema = mongoose.Schema({
     pain_areas: { type: String, required: false },
     medications: { type: String, required: false },
     experience: { type: String, required: false },
-    time : { type : Date, default: Date.now }
+    time : { type : String, default: minuteFromNow }
 
 });
 
