@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 var minuteFromNow = function(){
    var n = new Date() ;
-    var  v = n.toLocaleString()
+    var  v = n.toUTCString();
 	return v;
 };
 
