@@ -3,7 +3,7 @@ var minuteFromNow = function(){
    var d = new Date();
     d.setHours(d.getHours() + 5);
 	d.setMinutes(d.getMinutes() + 30);
-    var n = d.toLocaleTimeString()
+    var n = d.toLocaleString();
 	return n;
 };
 
@@ -27,7 +27,7 @@ const userSchema = mongoose.Schema({
     pain_areas: { type: String, required: false },
     medications: { type: String, required: false },
     experience: { type: String, required: false },
-    time : { type : String, default: minuteFromNow }
+    createdAt : { type : String, default: minuteFromNow }
 
 });
 
